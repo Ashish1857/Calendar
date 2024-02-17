@@ -1,0 +1,86 @@
+.calendar {
+    max-width: 908px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding-bottom: 20px;
+  }
+  
+  .calendar-nav h1 {
+    font-size: 1.5em;
+  }
+  
+  .day-header-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .day-header {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .day-cell {
+    position: relative;
+    height: 100px;
+    padding: 0; /* Remove padding if any */
+    background-color: #fff;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.2)
+}
+  
+  
+  .day-number {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: bold;
+  }
+  
+  .game-image {
+    max-width: 100%;
+    max-height: 80%;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Add additional responsive, hover, and active state styles as needed */
+
+  .day-cell.disabled {
+    background-color: #fff;
+    box-shadow: none;
+    color: #d0d0d0;
+  }
+  
+  .image-wrapper {
+    height: 100%;
+  }
+
+  .week-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for 7 days */
+    gap: 10px;
+  }
+  
+  .game-details-row {
+    display: flex;
+    grid-column: 1 / -1; /* Span all columns */
+    /* Additional styling for the details row */
+    padding: 10px;
+    background-color: #f1f1f1; /* Different background to distinguish from day cells */
+    /* You may want to add some margin if you have space between rows */
+  }
