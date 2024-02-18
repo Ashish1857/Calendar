@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# React Game Release Calendar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the React Game Release Calendar! This application provides a user-friendly interface to track game releases in a monthly calendar format. It is built with React and utilizes the `date-fns` library for date operations.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Interactive monthly view of game releases.
+- Navigation between months.
+- Clickable days to reveal game release details.
+- Responsive design for various screen sizes.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Before running the application, make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-### `npm run build`
+### Installing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get the project running, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository to your local machine: `git clone https://github.com/<userName>/react-game-release-calendar.git`
+2. Navigate to the project directory: `cd react-game-release-calendar`
+3. Install the dependencies: `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the Application
 
-### `npm run eject`
+To start the application in development mode, run: `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will start the local server and open the application in your default web browser. Typically, it will be available at [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### API Configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application fetches data from an external API. Ensure that you have the correct API endpoint configured in your environment variables:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a `.env` file in the root of your project and add the following:
 
-## Learn More
+## Design Decisions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Date Management:** `date-fns` was chosen for its modular nature, allowing for tree shaking and keeping the bundle size small.
+- **State Management:** Local component state is used instead of a state management library for simplicity, as the app's scale doesn't demand a more complex state management solution.
+- **Styling:** CSS is written from scratch for learning purposes and to avoid the overhead of a styling framework.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Trade-offs
 
-### Code Splitting
+- Due to time constraints, the application currently does not support localization and timezone adjustments. In the future, this could be implemented to enhance user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The calendar is not fully accessible. Future iterations would include better keyboard navigation and screen reader support.
 
-### Analyzing the Bundle Size
+## What I Would Do Differently
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If given more time, I would:
 
-### Making a Progressive Web App
+- Implement comprehensive unit and integration tests.
+- Add user authentication to allow personalized calendars.
+- Create a more robust backend to support real-time updates and user interaction.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Thanks to [date-fns](https://date-fns.org/) for their excellent date utility library.
+- Appreciation for the React community for continuous support and inspiration.

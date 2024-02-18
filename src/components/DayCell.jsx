@@ -9,7 +9,7 @@ const DayCell = ({ day, dayInMonth, gameRelease,handleDateClick }) => (
         <img src={gameRelease.imageUrl} alt={gameRelease.title} className="game-image" />
       </div>
     ) : (
-      <div className="day-number">{dayInMonth ? format(day, 'd') : ''}</div>
+      <div className="day-number" data-testid="no-game-day">{dayInMonth ? format(day, 'd') : ''}</div>
     )}
   </div>
 );

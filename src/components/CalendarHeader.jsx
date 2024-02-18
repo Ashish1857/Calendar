@@ -3,9 +3,9 @@ import { format } from 'date-fns';
 
 const CalendarHeader = ({ currentDate, prevMonth, nextMonth }) => (
   <div className="calendar-nav">
-    <button onClick={prevMonth}>{'<'}</button>
+    <p className="arrow-container" data-testid="prev-month" onClick={prevMonth}><span className="arrow right-arrow"></span></p>
     <h1>{format(currentDate, 'MMMM yyyy')}</h1>
-    <button onClick={nextMonth}>{'>'}</button>
+    <p className="arrow-container" data-testid="next-month" onClick={nextMonth}><span className="arrow left-arrow"></span></p>
   </div>
 );
 
