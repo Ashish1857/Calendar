@@ -63,9 +63,6 @@
 .game-image {
   max-width: 100%;
   height: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Disabled state for day cells that are not active or selectable. */
@@ -113,20 +110,14 @@
   height: 350px;
 }
 
-
-.arrow-container {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
 .arrow {
   display: inline-block;
   margin-right: 30px;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border-top: 2px solid #000;
   border-right: 2px solid #000;
+  cursor: pointer;
 }
 .right-arrow {
   transform: rotate(-135deg);

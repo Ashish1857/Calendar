@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import { DAYS_LIST } from "../utility/constants";
 
 const DayHeader = () => (
   <div className="day-header-container">
-    {['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map(day => (
-      <div className="day-header" key={day}>{day}</div>
+    {DAYS_LIST.map((day) => (
+      <div className="day-header" key={day}>
+        {day}
+      </div>
     ))}
   </div>
 );
